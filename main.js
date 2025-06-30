@@ -7,28 +7,39 @@ function showSlide(index) {
 
   currentIndex = (index + total) % total;
   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-  adjustSliderHeight(); // <-- ajuste la hauteur ici
+
+  adjustSliderHeight();
 }
+
 function adjustSliderHeight() {
   const container = document.getElementById("slider-container");
   const slides = document.querySelectorAll(".slide");
+
+  if (!slides.length) return;
+
   const currentSlide = slides[currentIndex];
   const image = currentSlide.querySelector("img");
 
-  if (image.complete) {
+  if (image && image.complete) {
     container.style.height = image.offsetHeight + "px";
-  } else {
+  } else if (image) {
     image.onload = () => {
       container.style.height = image.offsetHeight + "px";
     };
   }
 }
 
-// Ajuste la hauteur au chargement initial
-window.addEventListener("load", adjustSliderHeight);
+// Initialisation au chargement de la page
+window.addEventListener("load", () => {
+  showSlide(currentIndex); // affiche le premier slide
+});
+
+// Ajustement de la hauteur au redimensionnement
 window.addEventListener("resize", adjustSliderHeight);
 
-// Défilement automatique
-// setInterval(() => {
-//   showSlide(currentIndex + 1);
-// }, 4000);
+// ➕ Défilement automatique (optionnel : décommente si tu veux l’activer)
+/*
+setInterval(() => {
+  showSlide(currentIndex + 1);
+}, 4000);
+*/
