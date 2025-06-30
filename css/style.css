@@ -3,12 +3,14 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   background-color: #f5f7fa;
   color: #333;
 }
+
 .highlight {
   background: rgba(255, 255, 255, 0.2);
   padding: 0.1em 0.3em;
@@ -16,6 +18,7 @@ body {
   display: inline-block;
   transform: rotate(-2deg);
 }
+
 nav {
   background-color: #001f3f;
   color: white;
@@ -24,19 +27,23 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
 nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
 }
+
 nav ul li {
   cursor: pointer;
   transition: color 0.3s;
   border-bottom: none;
 }
+
 section ul li a {
   color: black;
 }
+
 nav ul li a {
   text-decoration: none;
   color: blue;
@@ -45,35 +52,42 @@ nav ul li a {
 nav ul li a:hover {
   color: white;
 }
+
 header {
-  background-image: url("/photo/istockphoto-1456825248-612x612.jpg");
+  background-image: url("photo/istockphoto-1456825248-612x612.jpg");
   background-size: cover;
   color: white;
   padding: 150px 10px;
   text-align: center;
 }
+
 header h1 {
   font-size: 48px;
   margin-bottom: 10px;
 }
+
 header p {
   font-size: 20px;
 }
+
 section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
 }
+
 h2 {
   font-size: 32px;
   color: #001f3f;
   margin-bottom: 20px;
 }
+
 .chantier ul,
 .realisations ul {
   list-style: none;
   padding: 0;
 }
+
 .chantier ul li,
 .realisations ul li {
   background: white;
@@ -83,19 +97,12 @@ h2 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   border-radius: 100px;
 }
+
 .slider-wrapper {
   position: relative;
   max-width: 100%;
   margin: 40px auto;
   overflow: hidden;
-}
-
-.slider-container {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  background: #f0f0f0;
 }
 
 .slider-container {
@@ -131,16 +138,17 @@ h2 {
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent noir */
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 10px;
   border-radius: 10px;
   font-size: 1.2em;
   font-weight: bold;
   text-align: center;
-  pointer-events: none; /* évite d'empêcher les clics sur l'image */
+  pointer-events: none;
   transition: background 0.3s ease;
 }
+
 .slide:hover .city-name {
   background: rgba(0, 0, 0, 0.7);
 }
@@ -177,6 +185,7 @@ h2 {
   padding: 20px;
   border-radius: 10px;
 }
+
 .contact-form {
   width: 100%;
   background-color: #cdd7f4;
@@ -186,11 +195,13 @@ h2 {
   border-top: 3px solid #000;
   text-align: left;
 }
+
 .contact-form h2 {
   color: black;
   margin-bottom: 20px;
   text-align: center;
 }
+
 .contact-form h2 a {
   text-decoration: none;
   color: rgb(0, 0, 0);
