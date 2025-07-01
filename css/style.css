@@ -26,16 +26,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-top: 10px;
 }
 
 nav ul li {
@@ -60,7 +56,6 @@ nav ul li a:hover {
 header {
   background-image: url("/ODELEC-/photo/istockphoto-1456825248-612x612.jpg");
   background-size: cover;
-  background-position: center;
   color: white;
   padding: 150px 10px;
   text-align: center;
@@ -226,35 +221,3 @@ footer {
   padding: 25px;
   margin-top: 60px;
 }
-
-/* 📱 Responsive mobile */
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 15px;
-  }
-
-  nav div {
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-
-  nav ul {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  nav ul li a {
-    font-size: 14px;
-  }
-
-  header h1 {
-    font-size: 32px;
-  }
-
-  header p {
-    font-size: 16px;
-  }
-}
-
