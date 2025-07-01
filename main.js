@@ -5,6 +5,8 @@ function showSlide(index) {
   const slides = document.querySelectorAll(".slide");
   const total = slides.length;
 
+  if (!slider || slides.length === 0) return;
+
   currentIndex = (index + total) % total;
   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 
@@ -15,7 +17,7 @@ function adjustSliderHeight() {
   const container = document.getElementById("slider-container");
   const slides = document.querySelectorAll(".slide");
 
-  if (!slides.length) return;
+  if (!container || slides.length === 0) return;
 
   const currentSlide = slides[currentIndex];
   const image = currentSlide.querySelector("img");
@@ -29,17 +31,13 @@ function adjustSliderHeight() {
   }
 }
 
-// Initialisation au chargement de la page
 window.addEventListener("load", () => {
-  showSlide(currentIndex); // affiche le premier slide
+  showSlide(currentIndex);
 });
 
-// Ajustement de la hauteur au redimensionnement
 window.addEventListener("resize", adjustSliderHeight);
 
-// ➕ Défilement automatique (optionnel : décommente si tu veux l’activer)
-/*
-setInterval(() => {
-  showSlide(currentIndex + 1);
-}, 4000);
-*/
+// Défilement automatique (optionnel)
+// setInterval(() => {
+//   showSlide(currentIndex + 1);
+// }, 4000);
