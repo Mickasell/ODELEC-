@@ -34,16 +34,6 @@ nav ul {
   gap: 25px;
 }
 
-nav ul li {
-  cursor: pointer;
-  transition: color 0.3s;
-  border-bottom: none;
-}
-
-section ul li a {
-  color: black;
-}
-
 nav ul li a {
   text-decoration: none;
   color: blue;
@@ -53,9 +43,14 @@ nav ul li a:hover {
   color: white;
 }
 
+section ul li a {
+  color: black;
+}
+
 header {
-  background-image: url("/ODELEC-/photo/istockphoto-1456825248-612x612.jpg");
+  background-image: url("../photo/istockphoto-1456825248-612x612.jpg");
   background-size: cover;
+  background-position: center;
   color: white;
   padding: 150px 10px;
   text-align: center;
@@ -207,16 +202,10 @@ h2 {
   color: rgb(0, 0, 0);
 }
 
-.contact-form small {
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-  font-style: italic;
-}
-
 footer {
   background-color: #001f3f;
   color: white;
   text-align: center;
   padding: 25px;
   margin-top: 60px;
+}
