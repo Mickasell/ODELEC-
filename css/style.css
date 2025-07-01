@@ -11,6 +11,7 @@ body {
   color: #333;
 }
 
+/* Texte en surbrillance */
 .highlight {
   background: rgba(255, 255, 255, 0.2);
   padding: 0.1em 0.3em;
@@ -19,36 +20,41 @@ body {
   transform: rotate(-2deg);
 }
 
+/* NAVIGATION */
 nav {
   background-color: #001f3f;
   color: white;
-  padding: 20px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+nav div {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: blue;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: white;
+  color: #0074d9;
 }
 
-section ul li a {
-  color: black;
-}
-
+/* HEADER */
 header {
-  background-image: url("../photo/istockphoto-1456825248-612x612.jpg");
+  background-image: url("/ODELEC-/photo/istockphoto-1456825248-612x612.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -65,6 +71,7 @@ header p {
   font-size: 20px;
 }
 
+/* SECTIONS GÉNÉRALES */
 section {
   padding: 60px 20px;
   max-width: 1000px;
@@ -77,22 +84,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.chantier ul,
-.realisations ul {
-  list-style: none;
-  padding: 0;
-}
-
-.chantier ul li,
-.realisations ul li {
-  background: white;
-  margin: 20px 0;
-  padding: 15px 20px;
-  border-left: 5px solid #0074d9;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  border-radius: 100px;
-}
-
+/* SLIDER */
 .slider-wrapper {
   position: relative;
   max-width: 100%;
@@ -103,7 +95,7 @@ h2 {
 .slider-container {
   width: 90%;
   max-width: 600px;
-  margin: 40px auto;
+  margin: auto;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -118,7 +110,6 @@ h2 {
 .slide {
   position: relative;
   min-width: 100%;
-  box-sizing: border-box;
   text-align: center;
 }
 
@@ -137,17 +128,12 @@ h2 {
   color: #fff;
   padding: 10px;
   border-radius: 10px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: bold;
-  text-align: center;
   pointer-events: none;
-  transition: background 0.3s ease;
 }
 
-.slide:hover .city-name {
-  background: rgba(0, 0, 0, 0.7);
-}
-
+/* Flèches de navigation */
 .arrow {
   position: absolute;
   top: 50%;
@@ -175,12 +161,42 @@ h2 {
   right: 10px;
 }
 
+/* RÉALISATIONS */
+.realisations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.realisations li {
+  background: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 5px solid #0074d9;
+  border-radius: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.realisations li h3 {
+  color: #001f3f;
+  margin-bottom: 5px;
+}
+
+.realisations li h4 {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* EXPERTISE */
 .expertise h3 {
   background: #e1f5fe;
   padding: 20px;
   border-radius: 10px;
+  font-weight: normal;
+  line-height: 1.8;
 }
 
+/* CONTACT */
 .contact-form {
   width: 100%;
   background-color: #cdd7f4;
@@ -188,13 +204,12 @@ h2 {
   border-radius: 20px;
   border: 1px solid #000;
   border-top: 3px solid #000;
-  text-align: left;
+  text-align: center;
 }
 
 .contact-form h2 {
   color: black;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .contact-form h2 a {
@@ -202,6 +217,14 @@ h2 {
   color: rgb(0, 0, 0);
 }
 
+.contact-form small {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* PIED DE PAGE */
 footer {
   background-color: #001f3f;
   color: white;
