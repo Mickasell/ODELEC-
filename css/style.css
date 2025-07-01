@@ -54,7 +54,7 @@ nav ul li a:hover {
 }
 
 header {
-  background-image: url("photo/istockphoto-1456825248-612x612.jpg");
+  background-image: url("../photo/istockphoto-1456825248-612x612.jpg");
   background-size: cover;
   color: white;
   padding: 150px 10px;
@@ -221,3 +221,6 @@ footer {
   padding: 25px;
   margin-top: 60px;
 }
+
+
+ 
