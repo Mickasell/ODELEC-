@@ -230,33 +230,23 @@ footer {
 /* 📱 Responsive mobile */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 15px;
   }
 
   nav div {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    flex-shrink: 0;
   }
 
   nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    width: 100%;
-    padding-left: 0;
-  }
-
-  nav ul li {
-    width: 100%;
+    gap: 15px;
+    flex-wrap: wrap;
   }
 
   nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 5px 0;
-    color: white;
+    font-size: 14px;
   }
 
   header h1 {
@@ -266,28 +256,5 @@ footer {
   header p {
     font-size: 16px;
   }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  .slider-container {
-    width: 95%;
-  }
-
-  .chantier ul li,
-  .realisations ul li {
-    border-radius: 20px;
-    padding: 15px;
-    font-size: 14px;
-  }
-
-  .contact-form {
-    padding: 20px;
-  }
-
-  .city-name {
-    font-size: 0.9em;
-    padding: 6px;
-  }
 }
+
