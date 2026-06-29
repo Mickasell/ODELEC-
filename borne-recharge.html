@@ -1,107 +1,292 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Installation borne de recharge électrique | ODELEC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation borne de recharge | ODELEC</title>
+
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f7f9fb; color:#111; }
-    header { background:#0b1f3a; color:white; padding:20px 8%; display:flex; justify-content:space-between; align-items:center; }
-    header a { color:white; text-decoration:none; margin-left:20px; }
-    .hero { padding:90px 8%; background:linear-gradient(135deg,#0b1f3a,#0e8f6e); color:white; }
-    .hero h1 { font-size:46px; max-width:750px; margin:0 0 20px; }
-    .hero p { font-size:20px; max-width:650px; }
-    .btns { margin-top:30px; }
-    .btn { display:inline-block; padding:15px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-right:10px; }
-    .btn-primary { background:#22c55e; color:white; }
-    .btn-secondary { background:white; color:#0b1f3a; }
-    section { padding:60px 8%; }
-    h2 { font-size:34px; margin-bottom:20px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .card { background:white; padding:25px; border-radius:14px; box-shadow:0 8px 25px rgba(0,0,0,0.08); }
-    .card h3 { margin-top:0; color:#0e8f6e; }
-    .highlight { background:#0b1f3a; color:white; border-radius:18px; padding:40px; }
-    form { background:white; padding:30px; border-radius:14px; box-shadow:0 8px 25px rgba(0,0,0,0.08); }
-    input, select, textarea { width:100%; padding:14px; margin:10px 0; border:1px solid #ddd; border-radius:8px; font-size:16px; }
-    button { background:#22c55e; color:white; border:none; padding:15px 25px; border-radius:8px; font-size:17px; font-weight:bold; cursor:pointer; }
-    footer { background:#081629; color:white; padding:30px 8%; text-align:center; }
-    @media(max-width:700px){ .hero h1{font-size:34px;} header{display:block;} header a{display:block;margin:10px 0 0;} }
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #102033;
+      background: #f4f7fb;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #07182f;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 90px 8%;
+      background: linear-gradient(135deg, #07182f, #0b8f6a);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      max-width: 850px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 720px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px 8px 8px 0;
+    }
+
+    .green { background: #20c763; color: white; }
+    .white { background: white; color: #07182f; }
+
+    section {
+      padding: 60px 8%;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 25px;
+      color: #07182f;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      color: #0b8f6a;
+      margin-top: 0;
+    }
+
+    .dark {
+      background: #07182f;
+      color: white;
+      border-radius: 22px;
+      padding: 45px;
+    }
+
+    .dark h2 {
+      color: white;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      max-width: 750px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #d6dce5;
+      font-size: 16px;
+    }
+
+    button {
+      background: #20c763;
+      color: white;
+      border: none;
+      padding: 16px 26px;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #07182f;
+      color: white;
+      text-align: center;
+      padding: 30px 8%;
+    }
+
+    footer a { color: white; }
+
+    @media(max-width: 700px) {
+      nav { display: block; }
+      nav a { display: block; margin: 10px 0 0; }
+      .hero h1 { font-size: 34px; }
+    }
   </style>
 </head>
+
 <body>
 
-<header>
+<nav>
   <strong>ODELEC</strong>
-  <nav>
+  <div>
     <a href="index.html">Professionnels</a>
-    <a href="#devis">Demander un devis</a>
-  </nav>
+    <a href="#devis">Devis gratuit</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Installation de borne de recharge pour voiture électrique</h1>
+  <p>
+    ODELEC installe votre borne de recharge à domicile, en maison individuelle,
+    parking privé ou copropriété, avec une installation propre, sécurisée et conforme.
+  </p>
+
+  <div class="buttons">
+    <a class="btn green" href="#devis">Demander un devis gratuit</a>
+    <a class="btn white" href="tel:+33634502174">Appeler ODELEC</a>
+  </div>
 </header>
 
-<div class="hero">
-  <h1>Installation de bornes de recharge pour véhicules électriques</h1>
-  <p>ODELEC accompagne les particuliers pour l’installation de bornes de recharge à domicile, en maison, parking ou copropriété, avec une installation propre, sécurisée et conforme.</p>
-  <div class="btns">
-    <a class="btn btn-primary" href="#devis">Demander un devis gratuit</a>
-    <a class="btn btn-secondary" href="tel:0634502174">Appeler ODELEC</a>
-  </div>
-</div>
-
 <section>
-  <h2>Votre borne installée simplement</h2>
+  <h2>Nos solutions pour particuliers</h2>
+
   <div class="grid">
     <div class="card">
       <h3>Maison individuelle</h3>
-      <p>Installation de borne dans garage, allée ou façade, avec protections électriques adaptées.</p>
+      <p>Installation de borne dans garage, allée, façade ou local technique.</p>
     </div>
+
     <div class="card">
       <h3>Copropriété / parking</h3>
-      <p>Étude du cheminement, alimentation, protections et pose en parking collectif.</p>
+      <p>Étude du cheminement, alimentation électrique et protections adaptées.</p>
     </div>
+
     <div class="card">
-      <h3>Puissance adaptée</h3>
-      <p>Borne 7,4 kW en monophasé ou 11 / 22 kW en triphasé selon votre installation.</p>
+      <h3>Borne 7,4 kW / 11 kW / 22 kW</h3>
+      <p>Choix de la puissance selon votre véhicule et votre installation électrique.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="highlight">
+  <div class="dark">
     <h2>Pourquoi choisir ODELEC ?</h2>
-    <p>Entreprise d’électricité intervenant sur logements collectifs, parkings et installations techniques. Vous bénéficiez d’un savoir-faire professionnel appliqué à votre installation à domicile.</p>
+    <p>
+      ODELEC est une entreprise d’électricité basée à Villeneuve-la-Garenne.
+      Nous intervenons sur des installations électriques professionnelles,
+      logements collectifs, parkings et infrastructures techniques.
+    </p>
+    <p>
+      Ce savoir-faire permet d’assurer aux particuliers une installation fiable,
+      propre et adaptée à leur logement.
+    </p>
   </div>
 </section>
 
 <section>
-  <h2>Comment ça se passe ?</h2>
+  <h2>Comment se déroule l’installation ?</h2>
+
   <div class="grid">
-    <div class="card"><h3>1. Analyse</h3><p>Vous nous envoyez quelques photos de votre tableau électrique et de l’emplacement souhaité.</p></div>
-    <div class="card"><h3>2. Devis</h3><p>Nous estimons la solution adaptée : borne, câble, protections et cheminement.</p></div>
-    <div class="card"><h3>3. Installation</h3><p>Pose de la borne, raccordement, protections et vérification du bon fonctionnement.</p></div>
+    <div class="card">
+      <h3>1. Étude</h3>
+      <p>Vous nous envoyez les photos du tableau électrique et de l’emplacement souhaité.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Devis</h3>
+      <p>Nous vous proposons une solution adaptée : borne, câble, protections et pose.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. Installation</h3>
+      <p>Nous réalisons la pose, le raccordement et les vérifications de fonctionnement.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Zones d’intervention</h2>
+  <div class="card">
+    <p>
+      ODELEC intervient en Île-de-France.
+    </p>
   </div>
 </section>
 
 <section id="devis">
   <h2>Demande de devis gratuit</h2>
-  <form action="mailto:odelec2020@gmail.com" method="post" enctype="text/plain">
+
+  <form action="mailto:odelec2018@yahoo.com" method="post" enctype="text/plain">
     <input type="text" name="Nom" placeholder="Votre nom" required>
     <input type="tel" name="Téléphone" placeholder="Votre téléphone" required>
     <input type="email" name="Email" placeholder="Votre email">
     <input type="text" name="Ville" placeholder="Votre ville">
+
     <select name="Type de logement">
       <option>Maison individuelle</option>
       <option>Appartement / copropriété</option>
       <option>Parking privé</option>
-      <option>Je ne sais pas</option>
+      <option>Je ne sais pas encore</option>
     </select>
-    <textarea name="Message" rows="5" placeholder="Décrivez votre besoin : distance tableau/borne, type de véhicule, emplacement..."></textarea>
+
+    <textarea name="Message" rows="5" placeholder="Décrivez votre besoin : véhicule, distance tableau/borne, emplacement, photos disponibles..."></textarea>
+
     <button type="submit">Envoyer ma demande</button>
   </form>
 </section>
 
+<section>
+  <h2>Questions fréquentes</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Quelle puissance choisir ?</h3>
+      <p>La borne 7,4 kW convient souvent aux maisons en monophasé. Le 11 ou 22 kW nécessite généralement du triphasé.</p>
+    </div>
+
+    <div class="card">
+      <h3>Faut-il une protection dédiée ?</h3>
+      <p>Oui, une borne doit être protégée par des protections électriques adaptées.</p>
+    </div>
+
+    <div class="card">
+      <h3>Combien coûte une installation ?</h3>
+      <p>Le prix dépend de la distance, du type de borne, du cheminement et de l’état du tableau électrique.</p>
+    </div>
+  </div>
+</section>
+
 <footer>
   <p>ODELEC — Installation de bornes de recharge en Île-de-France</p>
-  <p><a href="index.html" style="color:white;">Retour au site professionnel</a></p>
+  <p><a href="index.html">Retour au site professionnel</a></p>
 </footer>
 
 </body>
