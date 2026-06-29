@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Installation borne de recharge | ODELEC</title>
+  <meta name="description" content="ODELEC installe vos bornes de recharge pour véhicules électriques en maison, copropriété et parking en Île-de-France." />
 
   <style>
     * { box-sizing: border-box; }
@@ -11,8 +12,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #102033;
       background: #f4f7fb;
+      color: #102033;
       line-height: 1.6;
     }
 
@@ -52,10 +53,6 @@
       max-width: 720px;
     }
 
-    .buttons {
-      margin-top: 30px;
-    }
-
     .btn {
       display: inline-block;
       padding: 15px 24px;
@@ -68,9 +65,7 @@
     .green { background: #20c763; color: white; }
     .white { background: white; color: #07182f; }
 
-    section {
-      padding: 60px 8%;
-    }
+    section { padding: 60px 8%; }
 
     h2 {
       font-size: 34px;
@@ -103,16 +98,14 @@
       padding: 45px;
     }
 
-    .dark h2 {
-      color: white;
-    }
+    .dark h2 { color: white; }
 
     form {
       background: white;
       padding: 30px;
       border-radius: 18px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      max-width: 750px;
+      max-width: 760px;
     }
 
     input, select, textarea {
@@ -169,7 +162,7 @@
     parking privé ou copropriété, avec une installation propre, sécurisée et conforme.
   </p>
 
-  <div class="buttons">
+  <div>
     <a class="btn green" href="#devis">Demander un devis gratuit</a>
     <a class="btn white" href="tel:+33634502174">Appeler ODELEC</a>
   </div>
@@ -237,6 +230,7 @@
   <div class="card">
     <p>
       ODELEC intervient en Île-de-France.
+
     </p>
   </div>
 </section>
@@ -244,10 +238,14 @@
 <section id="devis">
   <h2>Demande de devis gratuit</h2>
 
-  <form action="mailto:odelec2018@yahoo.com" method="post" enctype="text/plain">
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="22ab2130-d4ce-48cf-b9e3-3def6938b5bf">
+    <input type="hidden" name="subject" value="Nouvelle demande de devis ODELEC">
+    <input type="hidden" name="redirect" value="https://mickasell.github.io/ODELEC-/merci.html">
+
     <input type="text" name="Nom" placeholder="Votre nom" required>
     <input type="tel" name="Téléphone" placeholder="Votre téléphone" required>
-    <input type="email" name="Email" placeholder="Votre email">
+    <input type="email" name="Email" placeholder="Votre e-mail" required>
     <input type="text" name="Ville" placeholder="Votre ville">
 
     <select name="Type de logement">
@@ -257,9 +255,9 @@
       <option>Je ne sais pas encore</option>
     </select>
 
-    <textarea name="Message" rows="5" placeholder="Décrivez votre besoin : véhicule, distance tableau/borne, emplacement, photos disponibles..."></textarea>
+    <textarea name="Message" rows="6" placeholder="Décrivez votre projet : véhicule, emplacement, distance tableau/borne, photos disponibles..." required></textarea>
 
-    <button type="submit">Envoyer ma demande</button>
+    <button type="submit">Demander mon devis gratuit</button>
   </form>
 </section>
 
