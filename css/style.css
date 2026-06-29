@@ -236,29 +236,24 @@ footer {
 
 .burger {
   display: none;
-  background: none;
+  background: transparent;
   border: none;
   color: white;
-  font-size: 32px;
+  font-size: 34px;
   cursor: pointer;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-@media (max-width: 768px) {
+@media screen and (max-width: 900px) {
   nav {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
   }
 
   .burger {
-    display: block;
+    display: block !important;
   }
 
-  nav ul {
-    display: none;
+  #nav-menu {
+    display: none !important;
     width: 100%;
     flex-direction: column;
     gap: 15px;
@@ -266,7 +261,7 @@ footer {
     text-align: center;
   }
 
-  nav ul.active {
-    display: flex;
+  #nav-menu.active {
+    display: flex !important;
   }
 }
