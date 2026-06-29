@@ -41,3 +41,9 @@ window.addEventListener("resize", adjustSliderHeight);
 // setInterval(() => {
 //   showSlide(currentIndex + 1);
 // }, 4000);
+
+
+function toggleMenu() {
+  const menu = document.getElementById("nav-menu");
+  menu.classList.toggle("active");
+}
