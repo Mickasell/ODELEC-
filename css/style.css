@@ -34,10 +34,11 @@ nav div {
   font-weight: bold;
   font-size: 1.5rem;
 }
-.logo img {
-  height: 42px;
-  width: auto;
-  display: block;
+.logo img{
+    height:75px;
+    width:auto;
+    display:block;
+    max-width:220px;
 }
 
 nav ul {
@@ -252,8 +253,10 @@ footer {
   nav {
     flex-wrap: wrap !important;
   }
- .logo img {
-  height: 34px;
+.logo img{
+    height:60px;
+    width:auto;
+    max-width:180px;
 }
   nav {
   width: 100%;
