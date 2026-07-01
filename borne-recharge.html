@@ -49,6 +49,11 @@
   font-size: 30px;
   cursor: pointer;
 }
+    .logo img{
+    height:60px;
+    width:auto;
+    display:block;
+}
     .hero{
   background:
     linear-gradient(rgba(7,24,47,.68),rgba(7,24,47,.68)),
@@ -162,6 +167,9 @@
 
   @media(max-width:700px){
 
+  .logo img{
+    height:45px;
+}
   .topnav{
     padding:18px 25px;
     flex-wrap:wrap;
@@ -220,7 +228,9 @@
 <body>
 
 <nav class="topnav">
-  <strong>ODELEC</strong>
+ <a href="index.html" class="logo">
+  <img src="photo/logo.png" alt="ODELEC">
+</a>
 
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
