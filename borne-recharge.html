@@ -36,23 +36,33 @@
       font-weight: bold;
     }
 
-    .hero {
-      padding: 90px 8%;
-      background: linear-gradient(135deg, #07182f, #0b8f6a);
-      color: white;
-    }
+    .hero{
+  background:
+    linear-gradient(rgba(7,24,47,.68),rgba(7,24,47,.68)),
+    url("photo/hero-borne.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
 
-    .hero h1 {
-      font-size: 46px;
-      max-width: 850px;
-      margin-bottom: 20px;
-    }
+.hero-content{
+  max-width: 720px;
+}
 
-    .hero p {
-      font-size: 21px;
-      max-width: 720px;
-    }
+.hero h1{
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
 
+.hero p{
+  font-size: 22px;
+  max-width: 680px;
+}
     .btn {
       display: inline-block;
       padding: 15px 24px;
@@ -137,11 +147,33 @@
 
     footer a { color: white; }
 
-    @media(max-width: 700px) {
-      nav { display: block; }
-      nav a { display: block; margin: 10px 0 0; }
-      .hero h1 { font-size: 34px; }
-    }
+   @media(max-width:700px){
+
+  nav{
+    display:block;
+  }
+
+  nav a{
+    display:block;
+    margin:10px 0 0;
+  }
+
+  .hero{
+    min-height:75vh;
+    padding:70px 25px;
+    background-position:center;
+  }
+
+  .hero h1{
+    font-size:36px;
+    line-height:1.2;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+}
   </style>
 </head>
 
@@ -156,15 +188,18 @@
 </nav>
 
 <header class="hero">
-  <h1>Installation de borne de recharge pour voiture électrique</h1>
-  <p>
-    ODELEC installe votre borne de recharge à domicile, en maison individuelle,
-    parking privé ou copropriété, avec une installation propre, sécurisée et conforme.
-  </p>
+  <div class="hero-content">
+    <h1>Installation de borne de recharge pour voiture électrique</h1>
 
-  <div>
-    <a class="btn green" href="#devis">Demander un devis gratuit</a>
-    <a class="btn white" href="tel:+33634502174">Appeler ODELEC</a>
+    <p>
+      ODELEC installe votre borne de recharge à domicile, en maison individuelle,
+      parking privé ou copropriété, avec une installation propre, sécurisée et conforme.
+    </p>
+
+    <div>
+      <a class="btn green" href="#devis">Demander un devis gratuit</a>
+      <a class="btn white" href="tel:+33634502174">Appeler ODELEC</a>
+    </div>
   </div>
 </header>
 
