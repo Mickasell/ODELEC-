@@ -17,25 +17,38 @@
       line-height: 1.6;
     }
 
-    nav {
-      background: #07182f;
-      color: white;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+   .topnav {
+  background: #07182f;
+  color: white;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
 
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
     .hero{
   background:
     linear-gradient(rgba(7,24,47,.68),rgba(7,24,47,.68)),
@@ -147,21 +160,48 @@
 
     footer a { color: white; }
 
-   @media(max-width:700px){
+  @media(max-width:700px){
 
-  nav{
+  .topnav{
+    padding:18px 25px;
+    flex-wrap:wrap;
+  }
+
+  .menu-toggle{
     display:block;
   }
 
-  nav a{
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+    width:100%;
+    margin-top:20px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .dropdown-content{
+    position:static;
     display:block;
-    margin:10px 0 0;
+    background:transparent;
+    box-shadow:none;
+    min-width:auto;
+  }
+
+  .dropdown-content a{
+    color:#20c763;
+    padding:8px 0 0 16px;
+    font-size:15px;
   }
 
   .hero{
     min-height:75vh;
     padding:70px 25px;
-   background-position:85% center;
+    background-position:85% center;
   }
 
   .hero h1{
@@ -179,11 +219,20 @@
 
 <body>
 
-<nav>
+<nav class="topnav">
   <strong>ODELEC</strong>
-  <div>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <div class="nav-links" id="navLinks">
     <a href="index.html">Professionnels</a>
-    <a href="#devis">Devis gratuit</a>
+
+    <div class="dropdown">
+      <a href="borne-recharge.html">Particulier</a>
+      <div class="dropdown-content">
+        <a href="#devis">Votre devis gratuit bornes de recharge</a>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -342,5 +391,10 @@
   <p><a href="index.html">Retour au site professionnel</a></p>
 </footer>
 
+  <script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 </body>
 </html>
