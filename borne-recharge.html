@@ -17,42 +17,50 @@
       line-height: 1.6;
     }
 
-  .topnav {
-  background: #001327;
+  nav {
+  background-color: #001327;
   color: white;
   padding: 14px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
+nav div {
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  color: white;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
 }
-    .logo img{
-    height:60px;
-    width:auto;
-    display:block;
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0074d9;
+}
+
+.burger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 34px;
+  cursor: pointer;
 }
     .hero{
   background:
@@ -228,25 +236,23 @@
 
 <body>
 
-<nav class="topnav">
- <a href="index.html" class="logo">
-<img src="photo/logo4.png?v=4" alt="ODELEC">
-</a>
-
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Professionnels</a>
-
-    <div class="dropdown">
-      <a href="borne-recharge.html">Particulier</a>
-      <div class="dropdown-content">
-        <a href="#devis">Votre devis gratuit bornes de recharge</a>
-      </div>
-    </div>
+<nav>
+  <div class="logo">
+    <a href="index.html">
+      <img src="photo/logo4.png?v=4" alt="ODELEC">
+    </a>
   </div>
-</nav>
 
+  <button class="burger" onclick="toggleMenu()">☰</button>
+
+  <ul id="nav-menu">
+    <li><a href="index.html#chantier">Opérations</a></li>
+    <li><a href="index.html#realisation">Réalisations</a></li>
+    <li><a href="index.html#expertise">Expertise</a></li>
+    <li><a href="borne-recharge.html">Particuliers</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
 <header class="hero">
   <div class="hero-content">
     <h1>Installation de borne de recharge pour voiture électrique</h1>
@@ -402,10 +408,11 @@
   <p><a href="index.html">Retour au site professionnel</a></p>
 </footer>
 
-  <script>
+<script>
 function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
+  document.getElementById("nav-menu").classList.toggle("active");
 }
+</script>
 </script>
 </body>
 </html>
