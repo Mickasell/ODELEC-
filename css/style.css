@@ -35,9 +35,9 @@ nav div {
   font-size: 1.5rem;
 }
 .logo img{
-    height:60px;
-    width:auto;
-    display:block;
+  height:80px;
+  width:auto;
+  display:block;
 }
 
 nav ul {
@@ -253,7 +253,7 @@ footer {
     flex-wrap: wrap !important;
   }
 .logo img{
-    height:48px;
+  height:58px;
 }
  
 
