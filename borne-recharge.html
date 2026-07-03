@@ -179,28 +179,27 @@ nav ul li a:hover {
     height:48px;
   }
 
-  .topnav{
-    padding:12px 12px;
-    flex-wrap:wrap;
-  }
+ nav {
+  flex-wrap: wrap !important;
+  padding: 12px 12px;
+}
 
-  .menu-toggle{
-    display:block;
-  }
+.burger {
+  display: block !important;
+}
 
-  .nav-links{
-    display:none;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:14px;
-    width:100%;
-    margin-top:20px;
-  }
+#nav-menu {
+  display: none !important;
+  width: 100%;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
 
-  .nav-links.active{
-    display:flex;
-  }
-
+#nav-menu.active {
+  display: flex !important;
+}
   .dropdown-content{
     position:static;
     display:block;
@@ -412,7 +411,6 @@ nav ul li a:hover {
 function toggleMenu() {
   document.getElementById("nav-menu").classList.toggle("active");
 }
-</script>
 </script>
 </body>
 </html>
