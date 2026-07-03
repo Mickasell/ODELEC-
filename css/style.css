@@ -22,9 +22,9 @@ body {
 
 /* NAVIGATION */
 nav {
-  background-color: #001a35;
+  background-color: #001327;
   color: white;
-  padding: 20px 40px;
+  padding: 14px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -249,13 +249,13 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-  nav {
+ nav {
     flex-wrap: wrap !important;
+    padding: 12px 18px;
   }
-.logo img{
-  height:58px;
-}
- 
+ .logo img {
+    height: 48px;
+  }
 
   .burger {
     display: block !important;
