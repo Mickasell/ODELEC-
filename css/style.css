@@ -34,11 +34,10 @@ nav div {
   font-weight: bold;
   font-size: 1.5rem;
 }
-.logo img {
-  height: 90px;
-  width: auto;
-  display: block;
-  filter: none;
+.logo img{
+    height:60px;
+    width:auto;
+    display:block;
 }
 
 nav ul {
@@ -253,15 +252,10 @@ footer {
   nav {
     flex-wrap: wrap !important;
   }
-.logo img {
-  height: 70px;
-  width: auto;
-  filter: none;
+.logo img{
+    height:48px;
 }
-  nav {
-  width: 100%;
-  overflow: hidden;
-}
+ 
 
   .burger {
     display: block !important;
