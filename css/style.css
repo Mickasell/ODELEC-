@@ -249,9 +249,9 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
- nav {
+nav {
     flex-wrap: wrap !important;
-    padding: 12px 18px;
+    padding: 12px 12px;
   }
  .logo img {
     height: 48px;
