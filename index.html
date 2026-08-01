@@ -96,21 +96,77 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="contact-form">
-    <h2>📧 CONTACT</h2>
-    <h2>Email : odelec2018@yahoo.com</h2>
-    <h2>Téléphone : 06-34-50-21-74</h2>
-    <h2>Gérant : SELLAM Mickael</h2>
-  </section>
+<section id="contact" class="contact-form">
 
-  <footer>
-    &copy; 2025 Odelec - Expert en installations électriques. Tous droits réservés.
-  </footer>
-  <script>
+  <h2>Contactez ODELEC</h2>
+
+  <p style="text-align:center;margin-bottom:35px;">
+    Vous avez un projet ? Remplissez le formulaire ci-dessous, nous vous répondrons rapidement.
+  </p>
+
+  <form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="22ab2130-d4ce-48cf-b9e3-3def6938b5bf">
+
+    <input type="hidden" name="subject" value="Nouvelle demande depuis le site ODELEC">
+
+    <input type="hidden" name="redirect" value="https://mickasell.github.io/ODELEC-/merci.html">
+
+    <input type="text" name="Nom" placeholder="Nom et prénom" required>
+
+    <input type="email" name="Email" placeholder="Adresse e-mail" required>
+
+    <input type="tel" name="Téléphone" placeholder="Téléphone" required>
+
+    <input type="text" name="Ville" placeholder="Ville">
+
+    <label for="projet">Type de projet *</label>
+
+    <select id="projet" name="Type de projet" required>
+      <option value="" selected disabled>Sélectionnez votre projet</option>
+
+      <option value="Logements collectifs">
+        Logements collectifs
+      </option>
+
+      <option value="Parking">
+        Parking
+      </option>
+
+      <option value="Borne de recharge">
+        Borne de recharge pour véhicule électrique
+      </option>
+
+      <option value="Autre">
+        Autre demande
+      </option>
+
+    </select>
+
+    <textarea
+      name="Message"
+      rows="6"
+      placeholder="Décrivez votre projet..."
+      required></textarea>
+
+    <button type="submit">
+      Envoyer ma demande
+    </button>
+
+  </form>
+
+</section>
+
+<footer>
+  &copy; 2025 ODELEC - Expert en installations électriques. Tous droits réservés.
+</footer>
+
+<script>
 const params = new URLSearchParams(window.location.search);
 if (params.get("source") === "particulier") {
   document.getElementById("particulier-btn").style.display = "block";
 }
 </script>
+
 </body>
 </html>
