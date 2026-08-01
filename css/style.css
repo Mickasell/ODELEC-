@@ -283,14 +283,13 @@ nav {
 .contact-form {
   width: 100%;
   max-width: 1000px;
-  background-color: #cdd7f4;
-  padding: 50px 30px;
-  border-radius: 20px;
-  border: 1px solid #000;
-  border-top: 3px solid #000;
+  margin: 0 auto;
+  padding: 70px 30px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   text-align: center;
 }
-
 .contact-form h2 {
   color: black;
   margin-bottom: 15px;
@@ -304,14 +303,13 @@ nav {
 }
 
 .contact-form form {
-  display: block;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
   padding: 30px;
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
 
