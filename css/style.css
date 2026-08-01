@@ -201,33 +201,7 @@ h2 {
   line-height: 1.8;
 }
 
-/* CONTACT */
-.contact-form {
-  width: 100%;
-  background-color: #cdd7f4;
-  padding: 30px;
-  border-radius: 20px;
-  border: 1px solid #000;
-  border-top: 3px solid #000;
-  text-align: center;
-}
 
-.contact-form h2 {
-  color: black;
-  margin-bottom: 20px;
-}
-
-.contact-form h2 a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
-
-.contact-form small {
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-  font-style: italic;
-}
 
 /* PIED DE PAGE */
 footer {
