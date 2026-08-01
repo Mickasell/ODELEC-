@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | ODELEC</title>
+
+  <meta
+    name="description"
+    content="Contactez ODELEC pour vos projets d'installation électrique, logements collectifs, commerces, parkings et bornes de recharge en Île-de-France."
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #102033;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #001327;
+      color: white;
+      padding: 14px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #20c763;
+    }
+
+    .burger {
+      display: none;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 34px;
+      cursor: pointer;
+      padding: 0 !important;
+      margin: 0 !important;
+      line-height: 1 !important;
+      height: 42px !important;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(7, 24, 47, 0.72), rgba(7, 24, 47, 0.72)),
+        url("photo/hero-borne.jpg");
+
+      background-size: cover;
+      background-position: center;
+      color: white;
+      min-height: 58vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      line-height: 1.1;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 700px;
+    }
+
+    section {
+      padding: 60px 8%;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 25px;
+      color: #07182f;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.4fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 26px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-card h3 {
+      color: #0b8f6a;
+      margin-bottom: 8px;
+      font-size: 21px;
+    }
+
+    .contact-card p {
+      color: #435266;
+    }
+
+    .contact-card a {
+      color: #07182f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      color: #20c763;
+    }
+
+    form {
+      background: white;
+      padding: 32px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 12px;
+      margin-bottom: 5px;
+      color: #07182f;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 8px;
+      border-radius: 10px;
+      border: 1px solid #d6dce5;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      background: white;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #20c763;
+      box-shadow: 0 0 0 3px rgba(32, 199, 99, 0.12);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    button {
+      width: 100%;
+      background: #20c763;
+      color: white;
+      border: none;
+      padding: 17px 26px;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 12px;
+      transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #19ad55;
+      transform: translateY(-1px);
+    }
+
+    .form-note {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #637083;
+      text-align: center;
+    }
+
+    .dark {
+      background: #07182f;
+      color: white;
+      border-radius: 22px;
+      padding: 45px;
+      text-align: center;
+    }
+
+    .dark h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .dark p {
+      max-width: 750px;
+      margin: 0 auto 25px;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px;
+    }
+
+    .green {
+      background: #20c763;
+      color: white;
+    }
+
+    .white {
+      background: white;
+      color: #07182f;
+    }
+
+    footer {
+      background: #07182f;
+      color: white;
+      text-align: center;
+      padding: 30px 8%;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #20c763;
+    }
+
+    @media screen and (max-width: 900px) {
+      nav {
+        flex-wrap: wrap;
+        padding: 12px;
+      }
+
+      .logo img {
+        height: 48px;
+      }
+
+      .burger {
+        display: block !important;
+      }
+
+      #nav-menu {
+        display: none !important;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+        padding-bottom: 10px;
+        text-align: center;
+      }
+
+      #nav-menu.active {
+        display: flex !important;
+      }
+
+      .hero {
+        min-height: 55vh;
+        padding: 65px 25px;
+        background-position: 75% center;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 45px 25px;
+      }
+
+      h2 {
+        font-size: 29px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      form {
+        padding: 24px;
+      }
+
+      .dark {
+        padding: 32px 22px;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="photo/logo5.png?v=5" alt="Logo ODELEC">
+      </a>
+    </div>
+
+    <button
+      class="burger"
+      type="button"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+      onclick="toggleMenu(this)"
+    >
+      ☰
+    </button>
+
+    <ul id="nav-menu">
+      <li><a href="index.html#chantier">Opérations</a></li>
+      <li><a href="index.html#realisation">Réalisations</a></li>
+      <li><a href="index.html#expertise">Expertise</a></li>
+      <li><a href="borne-recharge.html">Particuliers</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Contactez ODELEC</h1>
+
+      <p>
+        Vous avez un projet d’installation électrique, de logements collectifs,
+        de commerce, de parking ou de borne de recharge ? Décrivez-nous votre
+        besoin et notre équipe vous répondra dans les meilleurs délais.
+      </p>
+    </div>
+  </header>
+
+  <section>
+    <h2>Parlons de votre projet</h2>
+
+    <div class="contact-layout">
+
+      <div class="contact-details">
+
+        <div class="contact-card">
+          <h3>📞 Téléphone</h3>
+          <p>
+            Vous pouvez nous appeler directement pour nous présenter votre projet.
+          </p>
+          <p>
+            <a href="tel:+33634502174">06 34 50 21 74</a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>✉️ E-mail</h3>
+          <p>
+            Envoyez-nous vos plans, vos photos ou votre demande de devis.
+          </p>
+          <p>
+            <a href="mailto:contact@odelec.fr">contact@odelec.fr</a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>📍 Zone d’intervention</h3>
+          <p>
+            ODELEC intervient principalement à Paris et dans toute
+            l’Île-de-France.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>⏱️ Délai de réponse</h3>
+          <p>
+            Nous étudions chaque demande et revenons vers vous dans les meilleurs
+            délais.
+          </p>
+        </div>
+
+      </div>
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+
+        <input
+          type="hidden"
+          name="access_key"
+          value="22ab2130-d4ce-48cf-b9e3-3def6938b5bf"
+        >
+
+        <input
+          type="hidden"
+          name="subject"
+          value="Nouvelle demande de contact ODELEC"
+        >
+
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://mickasell.github.io/ODELEC-/merci.html"
+        >
+
+        <input
+          type="checkbox"
+          name="botcheck"
+          style="display:none;"
+          tabindex="-1"
+          autocomplete="off"
+        >
+
+        <div class="form-row">
+          <div>
+            <label for="nom">Nom et prénom *</label>
+            <input
+              id="nom"
+              type="text"
+              name="Nom"
+              placeholder="Votre nom et prénom"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="entreprise">Entreprise</label>
+            <input
+              id="entreprise"
+              type="text"
+              name="Entreprise"
+              placeholder="Nom de votre entreprise"
+              autocomplete="organization"
+            >
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="telephone">Téléphone *</label>
+            <input
+              id="telephone"
+              type="tel"
+              name="Téléphone"
+              placeholder="Votre numéro de téléphone"
+              autocomplete="tel"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="email">Adresse e-mail *</label>
+            <input
+              id="email"
+              type="email"
+              name="Email"
+              placeholder="Votre adresse e-mail"
+              autocomplete="email"
+              required
+            >
+          </div>
+        </div>
+
+        <label for="ville">Ville du projet</label>
+        <input
+          id="ville"
+          type="text"
+          name="Ville du projet"
+          placeholder="Exemple : Paris, Créteil, Nanterre..."
+          autocomplete="address-level2"
+        >
+
+        <label for="projet">Type de projet *</label>
+        <select id="projet" name="Type de projet" required>
+          <option value="" selected disabled>Sélectionnez votre projet</option>
+          <option value="Logements collectifs">Logements collectifs</option>
+          <option value="Commerce ou local professionnel">
+            Commerce ou local professionnel
+          </option>
+          <option value="Parking">Parking</option>
+          <option value="Borne de recharge">
+            Borne de recharge pour véhicule électrique
+          </option>
+          <option value="Rénovation électrique">
+            Rénovation électrique
+          </option>
+          <option value="Demande de devis">Demande de devis</option>
+          <option value="Autre">Autre demande</option>
+        </select>
+
+        <label for="message">Votre message *</label>
+        <textarea
+          id="message"
+          name="Message"
+          placeholder="Décrivez votre projet, le nombre de logements, l’adresse du chantier, vos besoins et les délais souhaités..."
+          required
+        ></textarea>
+
+        <button type="submit">Envoyer ma demande</button>
+
+        <p class="form-note">
+          Les informations envoyées sont uniquement utilisées pour répondre à
+          votre demande.
+        </p>
+
+      </form>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="dark">
+      <h2>Besoin d’une réponse rapide ?</h2>
+
+      <p>
+        Appelez directement ODELEC ou consultez nos différentes réalisations
+        en logements collectifs, commerces et parkings.
+      </p>
+
+      <a class="btn green" href="tel:+33634502174">
+        Appeler ODELEC
+      </a>
+
+      <a class="btn white" href="index.html#realisation">
+        Découvrir nos réalisations
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>ODELEC — Installation électrique en Île-de-France</p>
+    <p>
+      <a href="index.html">Accueil</a>
+      —
+      <a href="borne-recharge.html">Particuliers</a>
+      —
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu(button) {
+      const menu = document.getElementById("nav-menu");
+      const isOpen = menu.classList.toggle("active");
+
+      button.setAttribute("aria-expanded", isOpen);
+      button.textContent = isOpen ? "✕" : "☰";
+    }
+
+    document.querySelectorAll("#nav-menu a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        const menu = document.getElementById("nav-menu");
+        const burger = document.querySelector(".burger");
+
+        menu.classList.remove("active");
+        burger.setAttribute("aria-expanded", "false");
+        burger.textContent = "☰";
+      });
+    });
+  </script>
+
+</body>
+</html>
